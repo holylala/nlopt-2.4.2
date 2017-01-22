@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include <stdio.h>
 #include "luksan.h"
 
 #define MAX2(a,b) ((a) > (b) ? (a) : (b))
@@ -498,7 +499,7 @@ nlopt_result luksan_plis(int n, nlopt_func f, void *f_data,
 
      free(work);
      free(ix);
-
+    //  printf("iterm is %d\n",iterm);
      switch (iterm) {
 	 case 1: return NLOPT_XTOL_REACHED;
 	 case 2: return NLOPT_FTOL_REACHED;

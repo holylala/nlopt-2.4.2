@@ -247,7 +247,7 @@ nlopt_result auglag_minimize(int n, nlopt_func f, void *f_data,
 	       for (i = 0; i < d.mm; ++i) printf(" %g", d.mu[i]);
 	       printf("\n");
 	  }
-
+    //   printf("feasible:%d minf_feasible:%d penalty:%lf minf_penalty:%lf fcur:%lf *minf:%lf \n",feasible,minf_feasible,penalty,minf_penalty,fcur,*minf);
 	  if ((feasible && (!minf_feasible || penalty < minf_penalty
 			    || fcur < *minf)) || 
 	      (!minf_feasible && penalty < minf_penalty)) {

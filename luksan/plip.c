@@ -1,6 +1,7 @@
 #include <limits.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdio.h>
 #include <string.h>
 #include "luksan.h"
 
@@ -505,7 +506,7 @@ nlopt_result luksan_plip(int n, nlopt_func f, void *f_data,
 
      free(work);
      free(ix);
-
+    //  printf("iterm is %d\n",iterm);
      switch (iterm) {
 	 case 1: return NLOPT_XTOL_REACHED;
 	 case 2: return NLOPT_FTOL_REACHED;
